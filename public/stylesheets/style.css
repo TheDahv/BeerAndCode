@@ -1,3 +1,10 @@
+/** RESET **/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   
+   Tweaked. This was WAY more aggressive than I needed
+*/
 html,
 body,
 div,
@@ -76,9 +83,11 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+/* Force scroll bar */
 html {
   overflow-y: scroll;
 }
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -94,7 +103,7 @@ section {
 }
 body {
   background-color: #f3f4eb;
-  font-family: "Arvo", arial, serif;
+  font-family: 'Arvo', arial, serif;
 }
 blockquote,
 q {
@@ -104,19 +113,20 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/** Page-level **/
 @font-face {
-  font-family: "VT323";
+  font-family: 'VT323';
   src: url("fonts/VT323/VT323.ttf");
 }
 @font-face {
-  font-family: "Arvo";
+  font-family: 'Arvo';
   src: url("fonts/Arvo/Arvo-Regular.ttf");
 }
 a,
@@ -136,6 +146,7 @@ li {
 a {
   text-decoration: none;
 }
+/** Header specific **/
 header {
   text-align: center;
   background-color: #412919;
@@ -144,6 +155,7 @@ header {
 header img {
   height: 150px;
 }
+/* Nav */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -154,12 +166,12 @@ nav ul li {
   margin: 0 8px;
 }
 nav ul li a:link {
-  font-family: "VT323", arial, serif;
+  font-family: 'VT323', arial, serif;
   color: #f6f4cd;
   font-size: 1.5em;
 }
 nav ul li a:visited {
-  font-family: "VT323", arial, serif;
+  font-family: 'VT323', arial, serif;
   color: #f6f4cd;
   font-size: 1.5em;
 }
@@ -173,6 +185,7 @@ nav ul li a:active {
 .hoverNavLink {
   text-transform: uppercase;
 }
+/* Content */
 #content {
   width: 55%;
   margin: 0 auto;
