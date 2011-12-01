@@ -30,6 +30,18 @@ app.configure('production', function(){
 });
 
 // Routes
+app.get('/robots.txt', function (res, res) {
+  require('fs').readFile('robots.txt', function (err, data) {
+    if (err) {
+      res.writeHead(500, { type: 'text/plain' });
+      res.end('Error loading robots file');
+    } else {
+      res.writeHead(200, { type: 'text/plain' });
+      res.write(data);
+      res.end();
+    }
+  });
+});
 
 app.get('/', function(req, res){
   res.render('index', {
